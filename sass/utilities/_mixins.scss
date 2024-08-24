@@ -1,0 +1,116 @@
+
+@mixin box-shadow($shadow: 0 4px 8px rgba(0, 0, 0, 0.2)) {
+  box-shadow: $shadow;
+}
+
+
+@mixin box-style($padding: $padding-small, $margin: $margin-bottom, $radius: $border-radius) {
+  padding: $padding;
+  margin-bottom: $margin;
+  border-radius: $radius;
+  box-shadow: $box-shadow;
+}
+
+
+@mixin navbar-link-styles {
+    color: $navbar-text-color;
+    text-decoration: none;
+    font-size: $nav-link-font-size;
+    padding: $nav-link-padding;
+  }
+
+
+@mixin footer-text-styles {
+    color: $footer-text-color;
+    font-size: $footer-font-size;
+    margin: $footer-margin;
+    
+    &:hover {
+      color: $footer-text-hover-color;
+    }
+  }
+  
+
+
+@mixin background-image($image-path) {
+  background-image: url($image-path);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+@mixin text-background($color: $white-transparent) {
+  background-color: $color;
+  padding: 0 10px;
+  @include border-radius();
+}
+
+
+@mixin background-semi-transparent($color: $white-semi-transparent) {
+  background-color: $color;
+  @include border-radius();
+}
+
+@mixin button-style {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.76);
+  color: #000000d7;
+  cursor: pointer;
+  @include border-radius();
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+// Mixin para bordes y transiciones de tarjetas
+@mixin border-radius($radius: 5px) {
+  border-radius: $radius;
+}
+
+
+
+@mixin transition($property: all, $duration: 0.3s) {
+  transition: $property $duration;
+}
+
+@mixin flex-center($direction: column, $justify: flex-start, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// sass/utilities/_mixins.scss
+
+// Mixin para flex-direction
+@mixin flex-direction($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+// Mixin para justify-content
+@mixin justify-content($alignment) {
+  display: flex;
+  justify-content: $alignment;
+}
+
+// Mixin para align-items
+@mixin align-items($alignment) {
+  display: flex;
+  align-items: $alignment;
+}
+
+// Mixin para display
+@mixin display($display) {
+  display: $display;
+}
+
+@mixin grid-template-columns($value) {
+  grid-template-columns: $value;
+}

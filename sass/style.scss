@@ -1,0 +1,36 @@
+// primero se llama a todo lo que corresponde a utilities
+
+@import "./utilities/variables";
+@import "./utilities/maps";
+@import "./utilities/mixins";
+
+
+// segundo se llama a todo lo que corresponde a base
+
+@import "./base/reset";
+@import "./base/typografias";
+
+// tercero se llama al layout
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/main-index";
+@import "./layout/catalogo";
+
+
+
+//cuarto se llama a los componentes
+
+@import "./components/button";
+@import "./components/cards";
+@import "./components/navbar";
+@import "./components/nosotros";
+@import "./components/contacto";
+@import "./components/carrito";
+
+//SIEMPRE AL FINAL SE LLAMA A LOS MEDIA 
+
+// SI ESTAMOS EN DESKTOP A MOBILE => DECRECIENTE
+// SI ESTAMOS DE MOBILE A DESKTOP => CRECIENTE
+@import "./layout/media/mediaTablet";
+@import "./layout/media/mediaDesktop"; // Importación de media queries específicos

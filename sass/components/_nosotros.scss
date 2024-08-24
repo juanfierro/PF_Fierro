@@ -1,0 +1,20 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+
+.about-section {
+  @include flex-center(row, center, center);
+  min-height: 50rem;
+}
+
+.nosotros-container {
+  background: $white-semi-transparent;
+  padding: 20px;
+  @include border-radius(10px);
+  width: 85%;
+  text-align: center;
+
+  p {
+    line-height: 1.6;
+    text-align: left;
+  }
+}
